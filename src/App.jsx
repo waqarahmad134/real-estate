@@ -13,7 +13,6 @@ import Signup from "./pages/Signup"
 
 // Lazy load the other components
 const About = lazy(() => import("./pages/About"))
-const Post = lazy(() => import("./pages/Post"))
 const Genre = lazy(() => import("./pages/Genre"))
 const Genre1 = lazy(() => import("./pages/Genre1"))
 const Year = lazy(() => import("./pages/Year"))
@@ -61,20 +60,7 @@ function App() {
                   }
                 />
 
-                <Route
-                  path="/listing/:slug"
-                  element={
-                    <Suspense
-                      fallback={
-                        <div className="loader-container">
-                          <Loader />
-                        </div>
-                      }
-                    >
-                      <Post />
-                    </Suspense>
-                  }
-                />
+            
                 <Route
                   path="/:categories/:Id"
                   element={
